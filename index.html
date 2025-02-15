@@ -6,18 +6,37 @@
     <title>Jota B - Productor Musical</title>
     <style>
         body {
-            background-color: black;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
+        }
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .video-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .container {
             position: relative;
             max-width: 800px;
             margin: auto;
             padding: 20px;
+            z-index: 1;
         }
         h1, h2 {
             border-bottom: 2px solid white;
@@ -36,6 +55,13 @@
     </style>
 </head>
 <body>
+
+    <div class="video-container">
+        <video class="video-background" autoplay muted loop>
+            <source src="bedo.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
 
     <div class="container">
         <h1>Jota B</h1>
